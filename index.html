@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 — Адаптивная вёрстка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container header-inner">
+            <div class="logo"> <img style="float:left; margin:10px; width:100px; height:100px;" src="https://gelendzhik.academica.ru/images/colleges/539/1690978231_64ca47b73389b.webp" alt="Описание картинки для скрин-ридеров и поисковиков" /></div>
+            <div id="site-title">Название сайта</div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#link1">Ссылка меню 1</a></li>
+                    <li><a href="#link2">Ссылка 2</a></li>
+                    <li><a href="#link3">Ссылка 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content" class="container">
+
+        <section id="links" class="block">
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li>
+                    <a href="http://kubsu.ru">1. Абсолютная гиперссылка на главную страницу kubsu.ru (http)</a>
+                </li>
+
+                <li>
+                    <a href="https://kubsu.ru">2. Абсолютная гиперссылка на главную страницу kubsu.ru (https)</a>
+                </li>
+
+                <li>
+                    <a href="https://kubsu.ru">
+                        <img src="image.jpg" alt="Цветок" style="width: 200px;" />
+                        alt="Ссылка-изображение на КубГУ">
+                    </a>
+                    — 3. Ссылка-изображение (кликабельная картинка)
+                </li>
+
+                <li>
+                    <a href="/inner">4. Сокращённая ссылка на внутреннюю страницу (/inner)</a>
+                </li>
+
+                <li>
+                    <a href="/">5. Сокращённая ссылка на главную страницу (/)</a>
+                </li>
+
+                <li>
+                    <a href="#form-section">6. Ссылка на фрагмент текущей страницы (якорь на форму)</a>
+                </li>
+
+                <li>
+                    <a href="page.php?param1=value1&amp;param2=value2&amp;param3=value3">
+                        7. Ссылка с тремя параметрами в URL
+                    </a>
+                </li>
+
+                <li>
+                    <a href="page.php?id=123">8. Ссылка с параметром id в URL</a>
+                </li>
+
+                <li>
+                    <a href="current.html">9. Относительная ссылка на страницу в текущем каталоге</a>
+                </li>
+
+                <li>
+                    <a href="about/about.html">10. Относительная ссылка на страницу в каталоге about</a>
+                </li>
+
+                <li>
+                    <a href="../up.html">11. Относительная ссылка на страницу в каталоге уровнем выше</a>
+                </li>
+
+                <li>
+                    <a href="../../upup.html">12. Относительная ссылка на страницу в каталоге двумя уровнями выше</a>
+                </li>
+
+                <li>
+                    <p>
+                        13. Это пример <a href="https://kubsu.ru">контекстной ссылки</a> внутри текста абзаца.
+                        Она выделяется прямо в предложении и ведёт на сайт КубГУ.
+                    </p>
+                </li>
+
+                <li>
+                    <a href="https://ru.wikipedia.org/wiki/HTML#История">
+                        14. Ссылка на фрагмент страницы стороннего сайта (Википедия, раздел «История»)
+                    </a>
+                </li>
+
+                <li>
+                    15. Ссылки из областей картинки (HTML-тег map):
+                    <br>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100' viewBox='0 0 200 100'%3E%3Crect width='200' height='100' fill='%23ecf0f1' stroke='%23bdc3c7' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%23e74c3c'/%3E%3Crect x='110' y='20' width='70' height='60' fill='%232980b9' rx='8'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='12' fill='white' text-anchor='middle'%3EКруг%3C/text%3E%3Ctext x='145' y='55' font-family='Arial' font-size='12' fill='white' text-anchor='middle'%3EПрямоуг.%3C/text%3E%3C/svg%3E"
+                         alt="Карта с областями" usemap="#imagemap">
+                    <map name="imagemap">
+                        <area shape="circle" coords="50,50,30" href="https://kubsu.ru" alt="Круглая область">
+                        <area shape="rect" coords="110,20,180,80" href="https://kubsu.ru" alt="Прямоугольная область">
+                    </map>
+                </li>
+
+                <li>
+                    <a href="">16. Ссылка с пустым href (href="")</a>
+                </li>
+
+                <li>
+                    <a>17. Ссылка без href (не является ссылкой, но выглядит как текст)</a>
+                </li>
+
+                <li>
+                    <a href="https://kubsu.ru" rel="nofollow">18. Ссылка, по которой запрещён переход поисковикам (rel="nofollow")</a>
+                </li>
+
+                <li>
+                    <a href="https://kubsu.ru" rel="noindex">19. Запрещённая для индексации поисковиками (rel="noindex")</a>
+                </li>
+
+                <li>
+                    20. Нумерованный список ссылок с подписями title:
+                    <ol>
+                        <li><a href="https://kubsu.ru" title="Официальный сайт КубГУ">КубГУ</a></li>
+                        <li><a href="https://www.kubsu.ru/ru/university" title="Об университете">Об университете</a></li>
+                        <li><a href="https://www.kubsu.ru/ru/education" title="Образование">Образование</a></li>
+                    </ol>
+                </li>
+
+                <li>
+                    <a href="ftp://user:password@ftp.example.com/file.txt">
+                        21. Ссылка на файл на сервере FTP с авторизацией
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 2. ТАБЛИЦА (в HTML идёт ВТОРОЙ) -->
+        <section id="table-block" class="block">
+            <h2>Таблица</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Колонка 1</th>
+                        <th>Колонка 2</th>
+                        <th>Колонка 3</th>
+                        <th>Колонка 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Ячейка 11 объединена с 12</td>
+                        <td>Ячейка 13</td>
+                        <td>Ячейка 14</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 21</td>
+                        <td>Ячейка 22</td>
+                        <td>Ячейка 23</td>
+                        <td>Ячейка 24</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Ячейка 31<br>объединена с 41</td>
+                        <td>Ячейка 32</td>
+                        <td>Ячейка 33</td>
+                        <td>Ячейка 34</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 42</td>
+                        <td>Ячейка 43</td>
+                        <td>Ячейка 44</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 51</td>
+                        <td>Ячейка 52</td>
+                        <td>Ячейка 53</td>
+                        <td>Ячейка 54</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 61</td>
+                        <td>Ячейка 62</td>
+                        <td>Ячейка 63</td>
+                        <td>Ячейка 64</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 3. ФОРМА -->
+        <section id="form-block" class="block">
+            <h2 id="form-section">Форма</h2>
+            <form action="/" method="POST">
+
+                <p>
+                    <label>
+                        Однострочное текстовое поле:<br>
+                        <input name="field-name-1" value="ФИО">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Текстовое поле tel:<br>
+                        <input name="field-tel" type="tel" placeholder="Введите ваш tel">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Текстовое поле email:<br>
+                        <input name="field-email" type="email" placeholder="Введите вашу почту">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Текстовое поле даты:<br>
+                        <input name="field-date" value="2019-08-13" type="date">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Биография:<br>
+                        <textarea name="field-name-2">начальное значение</textarea>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Список (listbox с множественным выбором):<br>
+                        <select name="field-name-4[]" multiple>
+                            <option value="Значение1">Pascal</option>
+                            <option value="Значение2" selected>C</option>
+                            <option value="Значение3" selected>C++</option>
+                            <option value="Значение4" selected>JavaScript</option>
+                            <option value="Значение5" selected>PHP</option>
+                            <option value="Значение6" selected>Python</option>
+                            <option value="Значение7" selected>Java</option>
+                            <option value="Значение8" selected>Haskell</option>
+                            <option value="Значение9" selected>Clojure</option>
+                            <option value="Значение10" selected>Prolog</option>
+                            <option value="Значение11" selected>Scala</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    Радиокнопки:<br>
+                    <label>
+                        <input type="radio" checked name="radio-group-1" value="Значение1">
+                        Подпись радиокнопки 1
+                    </label>
+                    <label>
+                        <input type="radio" name="radio-group-1" value="Значение2">
+                        Подпись радиокнопки 2
+                    </label>
+                </p>
+
+                <p>
+                    Чекбокс:<br>
+                    <label>
+                        <input type="checkbox" checked name="check-1">
+                        Подпись чекбокса ставим справа
+                    </label>
+                </p>
+
+                <p>
+                    <input type="submit" value="Отправить">
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            Балакин Артем
+        </div>
+    </footer>
+
+</body>
+</html>
